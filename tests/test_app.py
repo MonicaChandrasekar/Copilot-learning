@@ -56,7 +56,7 @@ def test_signup_rejects_unknown_activity(client):
 
 def test_unregister_removes_participant(client):
     response = client.delete(
-        "/activities/Chess Club/signup",
+        "/activities/Chess%20Club/signup",
         params={"email": "michael@mergington.edu"},
     )
 
