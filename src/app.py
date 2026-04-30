@@ -102,8 +102,6 @@ def signup_for_activity(activity_name: str, email: str):
     activity = activities[activity_name]
 
     # Add student
-    if email in activity["participants"]:
-        return jsonify({"message": "Student already signed up"}), 409
     activity["participants"].append(email)
     return {"message": f"Signed up {email} for {activity_name}"}
 
